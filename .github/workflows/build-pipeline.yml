@@ -61,4 +61,12 @@ jobs:
         run: echo "This job is $JOB_NAME!"
         env:
           JOB_NAME: Super
+  secret_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Secret job"
+        run: echo "This secret is $SECRET!"
+        env:
+          SECRET: ${{secrets.PASSWORD}}
+
           
